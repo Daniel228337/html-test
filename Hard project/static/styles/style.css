@@ -1,28 +1,27 @@
-span {
-    font-style: italic;
-}
 /* Контент */
-.list-conteiner {
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.list-container {
     display: inline-block;
     border-style: solid;
     border-width: 0.5px;
     padding-right: 20px;
 }
 
-.list-conteiner>p {
+.list-container > p {
     text-align: center;
     font-weight: bold;
 }
 
-.img-conteiner {
+.img-container {
     float: right;
     border-style: solid;
     border-width: 0.5px;
     padding: 5px;
     margin-left: 10px;
-}
-
-.img-conteiner>div{
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -34,22 +33,65 @@ span {
 } 
 
 /* Верхняя нав. панель */
-
-.nav-conteiner {
+.nav-container {
     display: flex;
     justify-content: space-between;
+    background-color: rgb(187, 187, 238);
 }
 
-.nav-conteiner>nav>ul{
+.nav-container > nav > ul {
     display: flex;
     list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-conteiner>nav>ul>li>a{
+.nav-container > nav > ul > li > a {
     display: block;
     padding: 10px;
     border-style: solid;
     border-width: 0.5px;
-
-
 }
+
+
+@media (max-width: 900px) {
+    .nav-container{
+        flex-direction: column;
+    }
+}
+
+
+.page {
+    display: flex;
+    justify-content: center;
+}
+
+.content-page {
+    padding-left: 15px;
+}
+
+.header {
+    width: 6%;
+    background-color: #e4e0e0;
+}
+
+.section {
+    width: 92%;
+}
+
+.header > ol {
+    list-style: none;
+    border-bottom: 0.5px solid;
+    margin: 10px;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+ .header > div {
+    width: 100%;
+}
+
+.header > div > img {
+    width: 100%;
+} 
