@@ -1,0 +1,20 @@
+.game {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    width: 250px;
+    height: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-field {
+    background: hsl(270, 2%, 56%);
+    font-size: 70px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    width: 1.3em;
+    height: 1.3em;
+}                                                                                       
