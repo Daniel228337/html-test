@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;900&family=PT+Sans&family=Secular+One&display=swap');
+
+/* 
+font-family: "Fira Sans Condensed", sans-serif; 300, 400, 900 для заголовков
+font-family: "PT Sans", sans-serif; 400 для обычного текста 
+font-family: "Secular One", sans-serif; 400 для логотипа 
+*/
+
+body {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.container {
+    /* min-width: 1920px; */
+    /* margin: 0 auto; */
+}
+
+.btn {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.opacity-btn {
+    transition: opacity 0.2s ;
+}
+
+.opacity-btn:hover {
+    opacity: 0.8;
+}
+
+.opacity-btn:active {
+    opacity: 0.6;
+
+}
+
+/* HEADER */
+
+.header {
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 1fr 1fr 100px;
+    grid-template-areas: "logo nav search";
+
+ /* grid-template: "logo nav search" max-content / 1fr 1fr 100px; */
+    align-items: center;
+    justify-items: start;
+    padding: 20px 0;
+    text-transform: uppercase;
+    /* background-color: rgb(150, 204, 139); */
+    overflow: hidden;
+}
+
+.logo {
+    font-family: "Secular One", sans-serif;
+    font-weight: 400;
+    color: #FF4747;
+    font-size: 24px;
+    width: 150px;
+    line-height: 1;
+
+    grid-area: logo;
+    justify-self: end;
+    transition: color 0.1s;
+    user-select: none;
+}
+
+.header__nav {
+    grid-area: nav;
+}
+
+.header__nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+.header__nav a {
+    padding: 15px;
+    transition: color 0.1s;
+    position: relative;
+    display: inline-block;
+}
+
+.header__nav a:hover, .logo:hover {
+    color: #01BCB5;
+}
+
+.header__nav a:active {
+    color: #017D79;
+}
+
+.header__nav a::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 100%;
+
+    background-color: #01BCB5;
+    position: absolute;
+    left: 15px;
+    bottom: -200%;
+
+    transition: bottom 0.5s, background-color 0.1s ;
+}
+
+.header__nav a:hover::after {
+    bottom: -80%;
+} 
+
+.header__nav a:active::after {
+    background-color: #017D79;
+}
+
+.searh {
+    grid-area: search;
+}
+
+.search__icon { 
+    transform: fill 0.1s;
+}
+
+.search__icon:hover {
+    fill: #01BCB5;
+}
+
+.search__icon:active {
+    fill: #017D79;
+}
+
+/* MAIN */
+
+.main {
+    display: grid;
+    /* grid-template-rows: 3fr 1fr 3fr;
+    grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+    grid-template-areas: "slider-arrows healthy thirsty thirsty"
+                         "slider-arrows healthy slider-dots orange"
+                         "freshy healthy slider-dots orange"; */
+
+    grid-template: "slider-arrows healthy thirsty thirsty" 3fr
+                    "slider-arrows healthy slider-dots orange" 1fr
+                    "freshy healthy slider-dots orange" 3fr / 2fr 1fr 1.5fr 1.5fr;
+}
+
+/* SLIDER ARROWS */
+
+.slider-arrows {
+    position: relative;
+    grid-area: slider-arrows;
+}
+
+.slider-arrows__items-wrapper {
+    width: 100%;
+    height: 100%;
+
+    filter: brightness(80%);
+    display: flex;
+}
+
+.slider-arrow__item {
+
+}
+
+.slider-arrows__nav {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+    transform: translateY(-50%);
+}
+
+.slider-aarows__arrow {
+    color: #fff;
+    font-size: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.slider-aarows__arrow--left {
+
+}
+
+.slider-arrows__btn {
+
+}
+
+.slider-aarows__arrow--righ {
+
+}
+
+/* SLIDER DOTS */
+
+
+
+.slider-dots {
+    grid-area: slider-dots;
+    position: relative;
+}
+
+.slider-dots__items-wrapper {
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+    display: flex;
+}
+
+.slider-dots__item {
+
+}
+
+.slider-dots__btn-wrapper {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+
+}
+
+.slider-dots__btn {
+
+}
+
+.opacity-btn {
+
+}
+
+.slider-dots__nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+}
+
+.slider-dots__nav-item {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.slider-sots__nav-item--active {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.slider-sots__nav-item--active {
+
+}
